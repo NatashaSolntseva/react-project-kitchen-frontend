@@ -1,0 +1,91 @@
+.menu {
+  position: relative;
+  width: 172px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+
+  &__list {
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  &__user {
+    box-sizing: border-box;
+    max-width: 172px;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &_opened:hover {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+    border: 1px solid #008aff;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+  }
+
+  &__nav {
+    visibility: hidden;
+    opacity: 0;
+    width: 172px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.08),
+      0px 0px 1px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+
+    &_active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    padding: 8px 16px;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:hover {
+      border-radius: 4px;
+      text-decoration: none;
+      background: #e0f1ff;
+    }
+  }
+
+  &__text {
+    font-family: 'Alegreya Sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #008aff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__icon {
+    width: 24px;
+    margin-right: 9px;
+    vertical-align: middle;
+    & path {
+      stroke: #008aff;
+    }
+  }
+}

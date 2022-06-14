@@ -1,0 +1,52 @@
+@import '../../scss/mixins';
+
+.main {
+  max-width: 700px;
+  height: 100%;
+  list-style: none;
+  margin-bottom: 0;
+  opacity: 0;
+  animation: appearance 0.2s 0.1s forwards;
+}
+
+.container {
+  overflow-x: hidden;
+  max-width: 1140px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1.7fr 0.9fr;
+  gap: 81px;
+  padding-top: 56px;
+
+  @include mediaMax(1198px) {
+    max-width: 720px;
+  }
+
+  @include mediaMax(900px) {
+    max-width: 620px;
+  }
+
+  @include mediaMax(700px) {
+    max-width: 420px;
+  }
+}
+
+.rightbord {
+  display: grid;
+  grid-auto-flow: row;
+  align-self: start;
+  grid-row-gap: 56px;
+
+  @include mediaMax(800px) {
+    grid-row-gap: 40px;
+  }
+}
+
+.msg {
+  text-align: center;
+  line-height: 3;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@include appearance;

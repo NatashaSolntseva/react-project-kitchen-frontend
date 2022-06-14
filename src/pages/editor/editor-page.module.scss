@@ -1,0 +1,118 @@
+@import '../../scss/mixins';
+
+.editArticle {
+  padding: 40px 20px 150px;
+  margin: 0 auto;
+  max-width: 540px;
+  width: 100%;
+  opacity: 0;
+  animation: appearance 0.2s 0.1s forwards;
+}
+
+.editArticle__title {
+  text-align: center;
+  margin: 15px 0 40px;
+  font-size: 36px;
+}
+
+.editArticle__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.editArticle__label {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.editArticle__labelText {
+  margin: 0;
+  font-size: 16px;
+}
+
+.editArticle__input {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  font-size: 18px;
+  line-height: 24px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+
+.editArticle__input:focus {
+  border: 1px solid black;
+}
+
+.editArticle__input_textarea {
+  resize: none;
+}
+
+.editArticle__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.editArticle__submitBtn {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  background-color: #008aff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.editArticle__deleteBtn {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  background-color: transparent;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ff413b;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.editArticle__deleteIcon {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/images/delete-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .editArticle__title {
+    font-size: 32px;
+  }
+
+  .editArticle__input {
+    font-size: 16px;
+  }
+}
+
+@include appearance;

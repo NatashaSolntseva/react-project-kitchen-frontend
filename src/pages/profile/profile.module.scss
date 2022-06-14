@@ -1,0 +1,69 @@
+@import '../../scss/mixins';
+
+.list {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin-bottom: 0;
+  opacity: 0;
+  animation: appearance 0.2s 0.1s forwards;
+}
+
+.msg {
+  text-align: center;
+  line-height: 3;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.usercontainer {
+  padding-top: 56px;
+  padding-bottom: 16px;
+  background-color: transparent;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: appearance 0.2s 0.1s forwards;
+
+  &__text {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: rgba(10, 10, 11, 1);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    padding-bottom: 24px;
+  }
+}
+
+@include breakpoint('usercontainer', 900px) {
+  &__text {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.avatar {
+  padding-bottom: 24px;
+  max-height: 308px;
+  max-width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    width: 230px;
+    height: 230px;
+    border-radius: 120px;
+    object-fit: cover;
+  }
+}
+
+.articleList {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+@include appearance;

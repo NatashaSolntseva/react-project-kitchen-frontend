@@ -1,0 +1,47 @@
+.popularTags {
+  max-width: 324px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popularTags__title {
+  margin: 0;
+  color: #0a0a0b;
+  font-size: 32px;
+}
+
+.popularTags__tagsList {
+  margin: 0;
+  padding: 0;
+  row-gap: 8px;
+  column-gap: 24px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popularTags__tagsItem {
+  cursor: pointer;
+  font-size: 16px;
+  color: #62626a;
+  transition: 0.3s;
+}
+
+.popularTags__tagsItem:hover {
+  opacity: 0.8;
+}
+
+.popularTags__tagsItem_active {
+  color: #008aff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.popularTags__tagsItem_active:after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/images/cross.svg);
+}

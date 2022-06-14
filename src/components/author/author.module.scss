@@ -1,0 +1,42 @@
+.author {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__image {
+    margin-left: 4px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    justify-self: center;
+    box-sizing: border-box;
+    border: 1px solid #008aff;
+  }
+
+  &__personal {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #62626a;
+  }
+
+  &__date {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #62626a;
+  }
+}

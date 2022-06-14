@@ -1,0 +1,129 @@
+@import '../../scss/mixins';
+
+.button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  height: 40px;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 8px 16px;
+  background-position: 16px;
+  background-repeat: no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+
+  &_color_primary {
+    background-color: #008aff;
+
+    &:hover {
+      background-color: #007ce5;
+    }
+
+    &:focus {
+      background-color: #006ecc;
+    }
+  }
+
+  &_color_secondary {
+    background-color: #ff413b;
+
+    &:hover {
+      background-color: #e53b35;
+    }
+
+    &:focus {
+      background-color: #cc342f;
+    }
+  }
+
+  &_type_primary {
+    color: #fff;
+    font-weight: 500;
+
+    &[disabled] {
+      background-color: #cccccc;
+    }
+
+    &>svg {
+      object-position: center;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      stroke: #fff;
+
+      &>path {
+        stroke: #fff;
+      }
+    }
+  }
+
+  &_type_secondary {
+    color: #ff413b;
+    font-weight: 400;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+      color: #e53b35;
+
+      &>svg {
+        stroke: #e53b35;
+
+        &>path {
+          stroke: #e53b35;
+        }
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: #cc342f;
+
+      &>svg {
+        stroke: #cc342f;
+
+        &>path {
+          stroke: #cc342f;
+        }
+      }
+    }
+
+    &[disabled] {
+      color: #cccccc;
+
+      &>svg {
+        stroke: #cccccc;
+
+        &>path {
+          stroke: #cccccc;
+        }
+      }
+    }
+
+    &>svg {
+      object-position: center;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      stroke: #ff413b;
+
+      &>path {
+        stroke: #ff413b;
+      }
+    }
+  }
+
+}
+
+@include breakpoint('button', 800px) {
+  font-size: 14px;
+  line-height: 20px;
+}

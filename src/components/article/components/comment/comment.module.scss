@@ -1,0 +1,42 @@
+@import '../../../../scss/mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: none;
+  max-width: 700px;
+  padding: 0 24px 16px 24px;
+  border-radius: 4px 4px 4px 4px;
+  border: 0.1px solid #e5e5e5;
+  margin-bottom: 24px;
+
+  &__text {
+    color: rgba(10, 10, 11, 1);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Alegreya', sans-serif;
+  }
+}
+
+@include breakpoint('container', 800px) {
+  max-width: 421px;
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@include breakpoint('container', 400px) {
+  max-width: 280px;
+}
+
+.smallcontainer {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

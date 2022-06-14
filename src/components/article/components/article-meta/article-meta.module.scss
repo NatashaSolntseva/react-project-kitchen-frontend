@@ -1,0 +1,52 @@
+@import '../../../../scss/mixins';
+
+.info {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding-bottom: 24px;
+    padding-top: 24px;
+
+    &__text {
+        font-family: 'Alegreya Sans', sans-serif;
+        color: #62626A;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+    }
+    &__link {
+        text-decoration: none;
+        padding-right: 24px;
+    }
+
+    &__likes {
+      display: flex;
+      margin-left: auto;
+      padding-left: 8px;
+      font-size: 22px;
+  }
+
+}
+
+@include breakpoint('info', 800px) {
+    max-width: 453px;
+}
+
+@include breakpoint('info', 500px) {
+    max-width: 280px;
+}
+
+@include breakpoint('panel', 800px) {
+    &__img {
+        max-width: 453px;
+    }
+}
+
+@include breakpoint('panel', 500px) {
+    &__img {
+        max-width: 280px;
+    }
+
+}

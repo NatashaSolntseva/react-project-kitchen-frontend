@@ -1,0 +1,142 @@
+.article_preview {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0;
+  border-bottom: 1px solid #d4d7de;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.author_avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 13px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid #008aff;
+}
+
+.author_name {
+  margin: 0 0 4px 0;
+  font-family: 'Alegreya Sans';
+  font-size: 16px;
+  line-height: 125%;
+  color: #62626a;
+}
+
+.date {
+  margin: 0;
+  font-family: 'Alegreya Sans';
+  font-size: 12px;
+  line-height: 16px;
+  color: #62626a;
+}
+
+.likes_count {
+  font-family: 'Alegreya Sans';
+  font-size: 18px;
+  line-height: 24px;
+  color: #62626a;
+  vertical-align: middle;
+}
+
+.like_icon {
+  margin-left: 10px;
+  vertical-align: middle;
+
+  & path {
+    stroke: #62626a;
+  }
+}
+
+.article_main {
+  margin-bottom: 16px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+  font-family: 'Alegreya Sans';
+  font-size: 36px;
+  line-height: 40px;
+  color: #0a0a0b;
+  word-break: break-all;
+  padding-right: 45px;
+}
+
+.article_text {
+  margin: 0;
+  font-family: 'Alegreya';
+  font-size: 18px;
+  line-height: 24px;
+  color: #0a0a0b;
+}
+
+.article_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.readmore {
+  font-family: 'Alegreya Sans';
+  font-size: 18px;
+  line-height: 24px;
+  color: #ff413b;
+
+  &:hover {
+    color: #e53b35;
+  }
+
+  &:visited {
+    color: #cc342f;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0 24px 0 0;
+  font-family: 'Alegreya Sans';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #62626a;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.active_tag {
+  color: #008aff;
+}
+
+.likes {
+  width: 40px;
+  display: flex;
+  align-items: center;
+}

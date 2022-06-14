@@ -1,0 +1,71 @@
+@import '../../scss/mixins';
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 30px 72px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.08),
+      0px 0px 1px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    opacity: 0;
+    animation: appearance 0.2s 0.1s forwards;
+    z-index: 1;
+  }
+
+  &__title {
+    @include reset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 72px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #0a0a0b;
+  }
+
+  &__closeButton {
+    position: absolute;
+    width: 24px;
+    height: 23px;
+    top: 24px;
+    right: 24px;
+    border: none;
+    cursor: pointer;
+    background: url('../../assets//images/close-icon.svg');
+    -webkit-tap-highlight-color: transparent;
+    @include noselect;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 1;
+      transform: scale(0.9);
+    }
+  }
+}
+
+@include appearance;

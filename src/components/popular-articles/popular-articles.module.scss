@@ -1,0 +1,11 @@
+.popularArticles__list {
+  max-width: 359px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.popularArticles__item:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
+}

@@ -1,0 +1,18 @@
+@import '../../scss/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  opacity: 0;
+  animation: appearance 0.3s 0.2s forwards;
+}
+
+.main {
+  width: 100%;
+  max-width: 1140px;
+  flex: 1 1 auto;
+}
+
+@include appearance;

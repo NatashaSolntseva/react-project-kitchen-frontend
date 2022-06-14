@@ -1,0 +1,11 @@
+.newestArticles__list {
+  max-width: fit-content;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.newestArticles__item:not(:last-child) {
+  border-bottom: 1px solid #CCCCCC;
+}

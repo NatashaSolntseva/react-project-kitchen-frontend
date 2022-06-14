@@ -1,0 +1,114 @@
+@import '../../scss/mixins';
+
+.login {
+  margin: 0 auto;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 0px;
+  opacity: 0;
+  animation: appearance 0.2s 0.1s forwards;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  &__link {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #008aff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease-in;
+  }
+  &__link:hover {
+    text-decoration: none;
+    color: blue; /*TODO какой цвет?*/
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  &__label {
+    margin: 0;
+    display: block;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #62626a;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 16px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #62626a;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+  }
+
+  &__input:focus {
+    outline: none;
+    background-color: #f5f5f5;
+    border: 1px solid #a3a3a3;
+  }
+
+  &__input_error {
+    border: 1px solid #ff413b;
+  }
+
+  &__errorsWrapper {
+    height: 24px;
+  }
+
+  &__errorText {
+    margin: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ff413b;
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
+}
+@include mediaMax(900px) {
+  .login {
+    padding-top: 64px;
+
+    &__title {
+      font-size: 32px;
+    }
+  }
+}
+
+@include mediaMax(500px) {
+  .login {
+    padding-top: 72px;
+  }
+}
+
+@include appearance;

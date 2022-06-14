@@ -1,0 +1,56 @@
+@import '../../scss/mixins';
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  padding-top: 88px;
+  min-height: calc(100vh - 440px);
+  opacity: 0;
+  animation: appearance 0.2s 0.1s forwards;
+
+  &__title {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #ff413b;
+    font-size: 118px;
+    line-height: 100%;
+    padding-bottom: 24px;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__link {
+    color: rgb(0, 132, 255);
+    text-decoration: none;
+  }
+}
+
+@include mediaMax(900px) {
+  .notfound {
+    padding-top: 80px;
+    min-height: calc(100vh - 276px);
+  }
+}
+
+@include mediaMax(500px) {
+  .notfound {
+    padding: 80px 56px 0px 56px;
+    min-height: calc(100vh - 260px);
+
+    &__title {
+      font-size: 86px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@include appearance;

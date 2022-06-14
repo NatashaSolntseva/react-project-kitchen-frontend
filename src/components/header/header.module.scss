@@ -1,0 +1,153 @@
+@import '../../scss/mixins';
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 16px 0 48px;
+  border-bottom: 1px solid #0a0a0b;
+}
+
+.nav {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    margin: 8px 16px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: #008aff;
+
+    &:hover {
+      color: #007ce5;
+      text-decoration: underline;
+    }
+
+    &:hover .nav__icon {
+      & path {
+        stroke: #007ce5;
+      }
+    }
+  }
+
+  &__text {
+    margin-left: 8px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  &__icon {
+    & path {
+      transition: all 0.3s ease;
+      stroke: #008aff;
+    }
+  }
+}
+
+.link_text {
+  margin-left: 8px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #008aff;
+}
+
+.icon {
+  vertical-align: middle;
+
+  & path {
+    stroke: #008aff;
+  }
+}
+
+.header_menu {
+  position: relative;
+}
+
+.text_box {
+  display: flex;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 118px;
+  font-weight: 400;
+  color: #0a0a0b;
+}
+
+.description {
+  max-width: 225px;
+  margin: 0 0 0 30px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #0a0a0b;
+  margin-top: 24px;
+}
+
+@include mediaMax(1200px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .title {
+    font-size: 90px;
+  }
+}
+
+@include mediaMax(900px) {
+  .container {
+    max-width: 600px;
+    padding: 35px 0 24px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+}
+
+@include mediaMax(700px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .text_box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .description {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@include mediaMax(500px) {
+  .container {
+    max-width: 300px;
+    padding: 35px 0 17px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .text_box {
+    align-items: flex-start;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1;
+    max-width: 139px;
+    padding-top: 13px;
+  }
+}

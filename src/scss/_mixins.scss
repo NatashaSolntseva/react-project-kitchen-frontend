@@ -1,0 +1,51 @@
+@mixin noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin breakpoint($className, $screenSize) {
+  @media (max-width: $screenSize) {
+    .#{$className} {
+      @content;
+    }
+  }
+}
+
+@mixin mediaMax($screenSize) {
+  @media (max-width: $screenSize) {
+    @content;
+  }
+}
+
+@mixin mediaMin($screenSize) {
+  @media (min-width: $screenSize) {
+    @content;
+  }
+}
+
+@mixin mediaMinMax($screenSizeMin, $screenSizeMax) {
+  @media (min-width: $screenSizeMin) and (max-width: $screenSizeMax) {
+    @content;
+  }
+}
+
+@mixin appearance {
+  @keyframes appearance {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
